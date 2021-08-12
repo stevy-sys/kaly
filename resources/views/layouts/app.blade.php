@@ -19,35 +19,35 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     
-        <style>
-            .megamenu {
-                position: static
-            }
+    <style>
+        .megamenu {
+            position: static
+        }
 
-            .megamenu .dropdown-menu {
-                background: none;
-                width: 150%;
-                padding:10px;
-            }
+        .megamenu .dropdown-menu {
+            background: none;
+            width: 150%;
+            padding:10px;
+        }
 
-         
+        
 
-            code {
-                color: #745eb1;
-                background: #fff;
-                padding: 0.1rem 0.2rem;
-                border-radius: 0.2rem
-            }
+        code {
+            color: #745eb1;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem
+        }
 
-            .text-uppercase {
-                letter-spacing: 0.08em
-            }
-        </style>
+        .text-uppercase {
+            letter-spacing: 0.08em
+        }
+    </style>
     
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -78,30 +78,31 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
                             </li>
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                            
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-0">
             @yield('content')
         </main>
     </div>
