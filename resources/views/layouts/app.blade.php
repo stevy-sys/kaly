@@ -9,8 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +17,33 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    
+        <style>
+            .megamenu {
+                position: static
+            }
+
+            .megamenu .dropdown-menu {
+                background: none;
+                width: 150%;
+                padding:10px;
+            }
+
+         
+
+            code {
+                color: #745eb1;
+                background: #fff;
+                padding: 0.1rem 0.2rem;
+                border-radius: 0.2rem
+            }
+
+            .text-uppercase {
+                letter-spacing: 0.08em
+            }
+        </style>
+    
 </head>
 <body>
     <div id="app">
@@ -79,5 +105,7 @@
             @yield('content')
         </main>
     </div>
+     <!-- Scripts -->
+     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
