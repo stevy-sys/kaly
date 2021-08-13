@@ -36,7 +36,16 @@
     position: relative;
     .menu-abs{
         position:fixed;
-        overflow: -moz-hidden-unscrollable;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}
+@media (max-width:1000px){
+    .menu-abs{
+        position:fixed;
+        max-height: 400px;
+        overflow: auto;
         top: 0;
         width: 100%;
         z-index: 100;
