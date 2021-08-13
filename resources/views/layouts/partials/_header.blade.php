@@ -9,6 +9,7 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a href="{{ route("profil") }}" class="nav-link font-weight-bold text-uppercase">Profil</a></li>
                 <li class="nav-item"><a href="#" class="nav-link font-weight-bold text-uppercase">Publiez</a></li>
+                <li class="nav-item"><a href="{{ route("categorie.index") }}" class="nav-link font-weight-bold text-uppercase">Categorie</a></li>
                 <li class="nav-item dropdown megamenu">
                     <a id="megamenu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Actualite</a>
                     <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
