@@ -16522,6 +16522,25 @@ img.mfp-img {
 }
 
 /* :: 3.0 Base CSS */
+.menu-fixed {
+  position: relative;
+}
+.menu-fixed .menu-abs {
+  position: fixed;
+  overflow: -moz-hidden-unscrollable;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.push-top {
+  padding-top: 150px;
+}
+
+.navbar {
+  background-color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17117,7 +17136,6 @@ h3 {
 
 .header-area {
   position: relative;
-  z-index: 1000;
   width: 100%;
 }
 .header-area .top-header-area {

@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
-@include('layouts/partials/_header')
+<div class="menu-fixed">
+    <div class="menu-abs">
+        @include('layouts/partials/_header')
+    </div>
+</div>
+<div class="push-top"></div>
 
 <div id="profil">
     <div class="p-5"></div>

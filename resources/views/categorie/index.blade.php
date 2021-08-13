@@ -2,9 +2,14 @@
 
 @section('content')
 
-@include('layouts/partials/_header')
+<div class="menu-fixed">
+    <div class="menu-abs">
+        @include('layouts/partials/_header')
+    </div>
+</div>
+<div class="push-top"></div>
 <!-- ##### Catagory Area Start ##### -->
-<div class="post-catagory section-padding-100">
+<div class="post-catagory">
     <div class="container">
         <div class="row">
             <!-- Single Post Catagory -->

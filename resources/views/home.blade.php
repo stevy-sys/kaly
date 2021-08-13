@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
-@include('layouts/partials/_header')
-<div class="mb-5"></div>
+<div class="menu-fixed">
+    <div class="menu-abs">
+        @include('layouts/partials/_header')
+    </div>
+</div>
+<div class="push-top"></div>
 <!-- ##### Hero Area Start ##### -->
 <div class="hero-area">
     <!-- Hero Post Slides -->
@@ -92,7 +95,7 @@
 <!-- ##### Hero Area End ##### -->
 
 <!-- ##### Posts Area End ##### -->
-<div class="bueno-post-area mb-70">
+<div class="bueno-post-area">
     <div class="container">
         <div class="row justify-content-center">
             <!-- Post Area -->
