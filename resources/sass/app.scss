@@ -29,6 +29,8 @@
 @import './library/font-awesome.min.scss';
 @import './library/nice-select.scss';
 
+@import './profil/profil.scss';
+
 /* :: 3.0 Base CSS */
 
 * {
@@ -559,13 +561,21 @@ h3 {
 
 /* :: 4.0 Header Area CSS */
 
+
+.navbar-brand{
+    img{
+        width: 50%;
+    }
+}
+
+
 .header-area {
     position: relative;
     z-index: 1000;
     width: 100%;
     .top-header-area {
-        position: relative;
-        z-index: 1;
+        position: absolute;
+        z-index: -1;
         width: 100%;
         height: 95px;
         @media #{$breakpoint-md} {
@@ -589,33 +599,33 @@ h3 {
                 }
             }
         }
-        .top-search-area {
+        
+    }
+    .top-search-area {
+        position: relative;
+        z-index: 1;
+        form {
             position: relative;
             z-index: 1;
-            form {
-                position: relative;
-                z-index: 1;
-                input {
-                    width: 100%;
-                    height: 50px;
-                    background-color: transparent;
-                    border: none;
-                    color: $white-color;
-                    border-bottom: 2px solid #817773;
-                    font-size: 14px;
-                    font-style: italic;
-                }
-                button {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: 50px;
-                    z-index: 10;
-                    background-color: transparent;
-                    border: none;
-                    color: $white-color;
-                    cursor: pointer;
-                }
+            input {
+                width: 76%;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+                color: black;
+                border-bottom: 2px solid #817773;
+                font-size: 15px;
+                font-style: italic;
+            }
+            button {
+                position: absolute;
+                top: -5px;
+                height: 50px;
+                z-index: 10;
+                background-color: transparent;
+                border: none;
+                color: black;
+                cursor: pointer;
             }
         }
     }
