@@ -17,11 +17,9 @@
                 <!-- Footer Nav -->
                 <div class="footer-nav">
                     <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Recipes</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Politique et confidentialite</a></li>
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="{{ route("contact") }}">contact</a></li>
                     </ul>
                 </div>
             </div>

@@ -20,6 +20,7 @@ use App\Http\Controllers\IndexController;
 |
 */
 Route::get('/', [IndexController::class, 'index'])->name('accueil');
+Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
 
 Auth::routes();
 

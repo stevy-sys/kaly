@@ -54,7 +54,7 @@
 </nav>
 
 <!-- ##### Header Area Start ##### -->
-<header class="header-area">
+<header class=" text-center header-area">
     <!-- Navbar Area -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"> 
