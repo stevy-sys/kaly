@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ReceipeController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,7 @@ use App\Http\Controllers\CategorieController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'index'])->name('accueil');
 
 Auth::routes();
 

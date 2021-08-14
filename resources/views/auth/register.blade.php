@@ -7,7 +7,7 @@
                 <img src="/img/image.jpg" alt="" />
                 <h3>Welcome</h3>
                 <p>You are 30 seconds away from earning your own money!</p>
-                <input type="submit" name="" value="Accueil" /><br />
+                <a class="btn btn-danger" href="{{ route('accueil') }}">Retour accueil</a>
             </div>
             <div class="mt-3 col-md-8 register-right">
                 <ul class="nav nav-tabs nav-justified">

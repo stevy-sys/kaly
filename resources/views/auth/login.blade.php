@@ -7,7 +7,7 @@
                 <img src="/img/image.jpg" alt="" />
                 <h3>Welcome</h3>
                 <p>You are 30 seconds away from earning your own money!</p>
-                <input type="submit" name="" value="Accueil" /><br />
+                <a class="btn btn-danger" href="{{ route('accueil') }}">Retour accueil</a>
             </div>
             <div class="mt-3 col-md-8 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -41,8 +41,22 @@
                                             </span>
                                         @enderror
                                     </div>
+                                    <div class="form-group">
+                                        <input class="form-check-input ml-1" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        
+                                        <label class="form-check-label ml-4" for="remember">
+                                            {{ __('Remember Me') }}
+                                        </label>
+                                    </div>
                                     <input type="submit" class="btnRegister btn-success" value="Connexion" />
                                 </form>
+                                <div>
+                                    @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>

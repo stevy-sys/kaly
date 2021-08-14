@@ -413,9 +413,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    <div class="navbar-nav mr-auto footer-area">
+                        <div class="col-lg-12 col-sm-7">
+                            <!-- Footer Nav -->
+                            <div class="footer-nav">
+                                <ul>
+                                    <li class="active"><a href="{{ url('/') }}">Accueil</a></li>
+                                    <li><a href="#">Apropos de nous</a></li>
+                                    <li><a href="#">Blog et mis a jour du site</a></li>
+                                    <li><a href="#">Contactez-nous</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -438,6 +448,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{ url('/home') }}" class="dropdown-item">Home</a>
                                     <a class="dropdown-item" href="{{ route('profil') }}">
                                        Profil
                                     </a>
@@ -452,9 +463,9 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{ url('/home') }}" class="nav-link">Home</a>
-                            </li>
+                            {{-- <li class="nav-item">
+                               
+                            </li> --}}
                         @endguest
                     </ul>
                 </div>
