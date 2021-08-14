@@ -43,6 +43,7 @@
         z-index: 100;
     }
 }
+
 @media (max-width:1000px){
     .menu-abs{
         position:fixed;
@@ -1159,8 +1160,8 @@ img {
             position: relative;
             z-index: 1;
             @include flex(0 0 40%);
-            max-width: 40%;
-            width: 40%;
+            max-width: 100%;
+            width: 100%;
             img {
                 @include trans-duration(500ms);
                 width: 100%;
@@ -1170,9 +1171,6 @@ img {
             position: relative;
             z-index: 1;
             @include flex(0 0 60%);
-            max-width: 60%;
-            width: 60%;
-            padding-left: 30px;
             @media #{$breakpoint-xs} {
                 padding-left: 15px;
             }
@@ -1300,7 +1298,10 @@ img {
     position: relative;
     z-index: 1;
     @media #{$breakpoint-md} {
-        margin-top: 70px;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
     }
     @media #{$breakpoint-xs} {
         margin-top: 70px;

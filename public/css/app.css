@@ -17789,8 +17789,8 @@ img {
   position: relative;
   z-index: 1;
   flex: 0 0 40%;
-  max-width: 40%;
-  width: 40%;
+  max-width: 100%;
+  width: 100%;
 }
 .single-blog-post.style-1 .blog-thumbnail img {
   transition-duration: 500ms;
@@ -17800,9 +17800,6 @@ img {
   position: relative;
   z-index: 1;
   flex: 0 0 60%;
-  max-width: 60%;
-  width: 60%;
-  padding-left: 30px;
 }
 @media only screen and (max-width:767px) {
   .single-blog-post.style-1 .blog-content {
@@ -17939,7 +17936,10 @@ img {
 }
 @media only screen and (min-width:768px) and (max-width:991px) {
   .sidebar-area {
-    margin-top: 70px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
   }
 }
 @media only screen and (max-width:767px) {
