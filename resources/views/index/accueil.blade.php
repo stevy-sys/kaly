@@ -2,9 +2,12 @@
 
 @section('content')
 <div>
-    <div>
-        @include('layouts.partials._index_header')
+    <div class="menu-fixed">
+        <div class="menu-abs">
+            @include('layouts.partials._index_header')
+        </div>
     </div>
+  
     <!-- ##### Catagory Area Start ##### -->
     <div class="post-catagory section-padding-100-0 mb-70">
         <div class="container">

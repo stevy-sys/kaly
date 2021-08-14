@@ -2,7 +2,11 @@
 
 @section('content')
 <div>
-    @include('layouts.partials._index_header')
+    <div class="menu-fixed">
+        <div class="menu-abs">
+            @include('layouts.partials._index_header')
+        </div>
+    </div>
     <!-- ##### Contact Area Start ##### -->
     <section class="contact-area section-padding-100">
         <div class="container">
