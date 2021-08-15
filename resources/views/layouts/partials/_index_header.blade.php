@@ -10,11 +10,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarContent" class="collapse navbar-collapse">
-                <ul class="  navbar-nav">
+                <ul class="navbar-nav">
                     <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "/" ? "active" : "" }}"><a href="{{ url('/') }}">Accueil</a></li>
                     <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "apropos" ? "active" : "" }}"><a href="#">Apropos de nous</a></li>
                     <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "blog" ? "active" : "" }}"><a href="#">Blog et mis a jour du site</a></li>
-                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 mr-pourcentage-30 {{ request()->path() === "contact" ? "active" : "" }}"><a href="{{route("contact")}}">Contactez-nous</a></li>
+                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "contact" ? "active" : "" }}"><a href="{{route("contact")}}">Contactez-nous</a></li>
                     
                     @guest
                         @if (Route::has('login'))
@@ -39,7 +39,7 @@
                             <a class="dropdown-item" href="{{ route('profil') }}">
                                 Profil
                             </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="dropdown-item text-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
