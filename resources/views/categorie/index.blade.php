@@ -8,6 +8,7 @@
     </div>
 </div>
 <div class="push-top"></div>
+
 <!-- ##### Catagory Area Start ##### -->
 <div class="post-catagory">
     <div class="container">

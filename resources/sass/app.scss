@@ -31,6 +31,10 @@
 
 @import './profil/profil.scss';
 @import './auth/auth.scss';
+@import './publication/opensansFont.scss';
+@import './publication/jqueryUi.min.scss';
+@import './publication/material-design-iconic-font.scss';
+@import './publication/style2.scss';
 
 /* :: 3.0 Base CSS */
 /////////////////////////////////
@@ -59,9 +63,15 @@
     padding-top: 133px;
 }
 
-
+.article {
+    background-color: blue;
+}
 .navbar{
     background-color: white;
+}
+
+.table th, .table td {
+    border-top: 0;
 }
 
 /////////////////////////////////

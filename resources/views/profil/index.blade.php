@@ -1,15 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="menu-fixed">
-    <div class="menu-abs">
-        @include('layouts/partials/_header')
-    </div>
-</div>
-<div class="push-top"></div>
+
+    @include('layouts/partials/_header')
+ 
 
 <div id="profil">
-    <div class=" m-0 p-2"></div>
+    <div class=" mt-0 p-2"></div>
     <div class="container emp-profile ">
         <form method="post">
             <div class="row">
@@ -24,15 +21,15 @@
 
                     <div class="profile-work">
                         <p>WORK LINK</p>
-                        <a href="">Website Link</a><br />
-                        <a href="">Bootsnipp Profile</a><br />
-                        <a href="">Bootply Profile</a>
+                        <a href="#">Website Link</a><br />
+                        <a href="#">Bootsnipp Profile</a><br />
+                        <a href="#">Bootply Profile</a>
                         <p>SKILLS</p>
-                        <a href="">Web Designer</a><br />
-                        <a href="">Web Developer</a><br />
-                        <a href="">WordPress</a><br />
-                        <a href="">WooCommerce</a><br />
-                        <a href="">PHP, .Net</a><br />
+                        <a href="#">Web Designer</a><br />
+                        <a href="#">Web Developer</a><br />
+                        <a href="#">WordPress</a><br />
+                        <a href="#">WooCommerce</a><br />
+                        <a href="#">PHP, .Net</a><br />
                     </div>
                 </div>
 
@@ -40,10 +37,10 @@
                     <div class="profile-head">
                         <h5>Kshiti Ghelani</h5>
                         <h6>Web Developer and Designer</h6>
-                        <p class="profile-rating">Nombre abonnees : <span>233</span></p>
+                        <p class="profile-rating">Nombre abonnees : <b>233</b></p>
                         <p>
-                            <button class="btn btn-primary">Abonnee</button>
-                            <button class="btn btn-success">editer</button>
+                            <button class="btn btn-primary"> <a href="">Abonnee</a></button>
+                            <button class="btn btn-success"><a href="">Editer</a></button>
                         </p>
                     </div>
                 </div>

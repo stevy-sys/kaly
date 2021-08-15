@@ -7,13 +7,23 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     /**
-     * display one post
+     * display one post blog
      *
      * @return void
      */
-    public function show()
+    public function showBlog()
     {
-        return view("post.index");
+        return view("post.show-post-blog");
+    }
+
+    /**
+     * display create post receipe
+     *
+     * @return void
+     */
+    public function createReceipe()
+    {
+        return view("post.create-receipe");
     }
 
     /**
@@ -26,13 +36,14 @@ class PostController extends Controller
         return view("post.create-blog");
     }
 
+
     /**
-     * display create post receipe
+     * display post receipe
      *
      * @return void
      */
-    public function createReceipe()
+    public function showReceipe()
     {
-        return view("post.create-receipe");
+        return view("post.show-post-receipe");
     }
 }

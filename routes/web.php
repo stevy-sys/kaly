@@ -25,9 +25,9 @@ Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/post', [PostController::class, 'show'])->name('post.show');
+Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
+Route::get('/post', [PostController::class, 'showBlog'])->name('post.show');
 Route::get('/post/create/blog', [PostController::class, 'createBlog'])->name('post.create-blog');
 Route::get('/post/create/receipe', [PostController::class, 'createReceipe'])->name('post.create-receipe');
-Route::get('/receipe', [ReceipeController::class, 'show'])->name('receipe.show');
+Route::get('/receipe', [PostController::class, 'showReceipe'])->name('receipe.show');
 Route::get('/categorie', [CategorieController::class, 'index'])->name('categorie.index');
-Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
