@@ -122,6 +122,12 @@
                         <a class="dropdown-item" href="{{ route('profil') }}">
                             Profil
                         </a>
+                        <a class="dropdown-item" href="#">
+                            Message
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            Mon boutique
+                        </a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}

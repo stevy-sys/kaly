@@ -39,11 +39,16 @@
                             <a class="dropdown-item" href="{{ route('profil') }}">
                                 Profil
                             </a>
+                            <a class="dropdown-item" href="#">
+                                Message
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Mon boutique
+                            </a>
                             <a class="dropdown-item text-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-    
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
