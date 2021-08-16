@@ -1,5 +1,4 @@
 require('./bootstrap');
-require('./main');
+require("./publication/jquery-ui.min")
 require("./publication/jquery.steps")
-require("./publication/jquery-ui.min.js")
-require("./publication/main")
+// require("./publication/main")
