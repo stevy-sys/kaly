@@ -30,24 +30,24 @@
                         @endif
                     @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-center" href="#" role="button"
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
-                        <div class="dropdown-menu text-center dropdown-menu-left" aria-labelledby="navbarDropdown">
-                            <a href="{{ url('/home') }}" class="dropdown-item">Home</a>
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                            <a href="{{ url('/home') }}" class="dropdown-item"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                             <a class="dropdown-item" href="{{ route('profil') }}">
-                                Profil
+                                <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
                             <a class="dropdown-item" href="#">
-                                Message
+                                <i class="fa fa-comments" aria-hidden="true"></i> Message
                             </a>
                             <a class="dropdown-item" href="#">
-                                Mon boutique
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mon boutique
                             </a>
-                            <a class="dropdown-item text-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="dropdown-item " href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                <i class="fa fa-sign-out" aria-hidden="true"></i> {{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf

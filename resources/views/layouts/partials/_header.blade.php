@@ -17,8 +17,8 @@
                             publiez
                         </a>
                         <div class="dropdown-menu text-center dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="{{ route('post.create-receipe') }}" class="dropdown-item">recette</a>
-                            <a href="{{ route('post.create-blog') }}" class="dropdown-item">blog</a>
+                            <a href="{{ route('post.create-receipe') }}" class="dropdown-item"> <i class="fa fa-cutlery" aria-hidden="true"></i>  Recette</a>
+                            <a href="{{ route('post.create-blog') }}" class="dropdown-item"> <i class="fa fa-comment" aria-hidden="true"></i> blog</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="{{ route("categorie.index") }}" class="nav-link font-weight-bold text-uppercase">Categorie</a></li>
@@ -33,14 +33,10 @@
                                                 <div class="col-lg-6 mb-4">
                                                     <h6 class="font-weight-bold text-uppercase">Heading one</h6>
                                                     <ul class="list-unstyled">
-                                                        <li class="nav-item"><a href="{{ route("home") }}"
-                                                                class="nav-link text-small pb-0">Home</a></li>
-                                                        <li class="nav-item"><a href="#"
-                                                                class="nav-link text-small pb-0 ">About</a></li>
-                                                        <li class="nav-item"><a href="#"
-                                                                class="nav-link text-small pb-0 ">Help</a></li>
-                                                        <li class="nav-item"><a href="#"
-                                                                class="nav-link text-small pb-0 ">Account</a></li>
+                                                        <li class="nav-item"><a href="{{ route("home") }}"class="nav-link text-small pb-0">Home</a></li>
+                                                        <li class="nav-item"><a href="#"class="nav-link text-small pb-0 ">About</a></li>
+                                                        <li class="nav-item"><a href="#"class="nav-link text-small pb-0 ">Help</a></li>
+                                                        <li class="nav-item"><a href="#"class="nav-link text-small pb-0 ">Account</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-lg-6 mb-4">
@@ -119,19 +115,19 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="{{ url('/home') }}" class="dropdown-item">Home</a>
+                            <a href="{{ url('/home') }}" class="dropdown-item"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                             <a class="dropdown-item" href="{{ route('profil') }}">
-                                Profil
+                                <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
                             <a class="dropdown-item" href="#">
-                                Message
+                                <i class="fa fa-comments" aria-hidden="true"></i> Message
                             </a>
                             <a class="dropdown-item" href="#">
-                                Mon boutique
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mon boutique
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                <i class="fa fa-sign-out" aria-hidden="true"></i> {{ __('Logout') }}
                             </a>
     
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

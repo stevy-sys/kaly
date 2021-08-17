@@ -37,8 +37,10 @@
                                     bibendum pharetra non vitae lectus.
                                 </p>
                                 <p>
-                                    <button type="button" class="btn btn-success">Ajouter favoris</button>
-                                    <button type="button" class="btn btn-warning">DejaFavoris</button>
+                                    <button type="button" class="btn btn-success">
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                        Ajouter favoris
+                                    </button>
                                 </p>
                             </div>
                         </div>
@@ -73,8 +75,8 @@
                                     bibendum pharetra non vitae lectus.
                                 </p>
                                 <p>
-                                    <button type="button" class="btn btn-info">Promouvoir</button>
-                                    <button type="button" class="btn btn-warning">Favoris</button>
+                                    <button type="button" class="btn btn-info"> <i class="fa fa-bullhorn" aria-hidden="true"></i> Promouvoir</button>
+                                    <button type="button" class="btn btn-success"><i class="fa fa-heart" aria-hidden="true"></i></button>
                                 </p>
                             </div>
                         </div>
@@ -107,10 +109,10 @@
             <!-- Sidebar Area -->
             <div class="col-12 col-sm-9 col-md-12 col-lg-4 col-xl-3">
                 <div class="sidebar-area">
-                        <!-- Single Widget Area -->
+                        {{-- <!-- Single Widget Area -->
                         <div class="single-widget-area add-widget mb-30">
                             <img src="img/bg-img/add.png" alt="">
-                        </div>
+                        </div> --}}
                   
                     <!-- Single Widget Area -->
                     <div class="single-widget-area post-widget">
@@ -183,6 +185,48 @@
                             <!-- Blog Thumbnail -->
                             <div class="blog-thumbnail">
                                 <img src="img/bg-img/16.jpg" alt="">
+                            </div>
+                            <!-- Blog Content -->
+                            <div class="blog-content">
+                                <a href="#" class="post-title">Burger with fries</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">Dessert</a>
+                                    <a href="#" class="post-author">By Julia Stiles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post-area d-flex">
+                            <!-- Blog Thumbnail -->
+                            <div class="blog-thumbnail">
+                                <img src="img/bg-img/17.jpg" alt="">
+                            </div>
+                            <!-- Blog Content -->
+                            <div class="blog-content">
+                                <a href="#" class="post-title">Burger with fries</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">Dessert</a>
+                                    <a href="#" class="post-author">By Julia Stiles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post-area d-flex">
+                            <!-- Blog Thumbnail -->
+                            <div class="blog-thumbnail">
+                                <img src="img/bg-img/18.jpg" alt="">
+                            </div>
+                            <!-- Blog Content -->
+                            <div class="blog-content">
+                                <a href="#" class="post-title">Burger with fries</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date">Dessert</a>
+                                    <a href="#" class="post-author">By Julia Stiles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post-area d-flex">
+                            <!-- Blog Thumbnail -->
+                            <div class="blog-thumbnail">
+                                <img src="img/bg-img/19.jpg" alt="">
                             </div>
                             <!-- Blog Content -->
                             <div class="blog-content">
