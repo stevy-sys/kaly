@@ -44,9 +44,16 @@
 		
 											<div class="form-holder">
 												<div>
+
+													{{-- <div class="input-group mb-3">
+														<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+														<span class="input-group-text" id="basic-addon2">@example.com</span>
+													</div> --}}
+
 													<label for="Duree" class="special-label-1 form-row-inner">Duree du preparation</label>
-													<div class="form-group">
-														<input name="Duree" type="text" class="form-control" id="Duree" placeholder="">
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="45" aria-label="45" aria-describedby="basic-addon2">
+														<span class="input-group-text" id="basic-addon2">minute</span>
 													</div>
 												
 													<label for="difficulte" class="special-label-1 form-row-inner ">Difficulte</label>
@@ -61,8 +68,9 @@
 											<div class="form-holder">
 												<div>
 													<label for="Depense" class="special-label-1 form-row-inner">Depense total</label>
-													<div class="form-group">
-														<input name="Depense" type="text" class="form-control" id="Depense" placeholder="">
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="5000" aria-label="5000" aria-describedby="basic-addon2">
+														<span class="input-group-text" id="basic-addon2">euro</span>
 													</div>
 												
 													<label for="Personne" class="special-label-1 form-row-inner ">Personne(s)</label>
@@ -101,32 +109,30 @@
 											<button class="btn btn-danger pl-3 pr-3" type="button" > - </button>
 										</div>
 										<div class="form-row">
-											<div class="form-holder receipe">
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">Ingredient1</label>
-													<input type="text" class="form-control" id="name" placeholder="">
-												</div>
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">quantite1</label>
-													<input type="text" class="form-control" id="name" placeholder="">
-												</div>
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">unite1</label>
-													<input type="text" class="form-control" id="name" placeholder="">
-												</div>
-											</div>
-											<div class="form-holder receipe">
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">Ingredient3</label>
-													<input type="text" class="form-control" id="name" placeholder="">
-												</div>
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">quantite3</label>
-													<input type="text" class="form-control" id="name" placeholder="">
-												</div>
-												<div class="form-group">
-													<label for="name" class="special-label-1 form-row-inner">unite3</label>
-													<input type="text" class="form-control" id="name" placeholder="">
+											<div class="form-holder ">
+												<div class="row recette">
+													<div class=" receipe col-lg-5 col-md-5 col-xs-12">
+														<div class="form-group">
+															<label for="name" class="special-label-1 form-row-inner">Ingredient1</label>
+															<input type="text" class="form-control" id="name" placeholder="">
+														</div>
+													</div>
+													<div class="receipe col-lg-3 col-md-3 col-xs-12">
+														<div class="form-group">
+															<label for="name" class="special-label-1 form-row-inner">quantite1</label>
+															<input type="text" class="form-control" id="name" placeholder="">
+														</div>
+													</div>
+													<div class="receipe col-lg-4 col-md-4 col-xs-12">
+														<div class="form-group">
+															<label for="categorie" class="special-label-1 form-row-inner">unite</label>
+															<select name="categorie" id="categorie" class="form-control">
+																<option value="categorie 1">litre</option>
+																<option value="categorie 2">gramme</option>
+																<option value="categorie 3">piece</option>
+															</select>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>

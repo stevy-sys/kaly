@@ -26,7 +26,7 @@
                         <div class="col-lg-7 col-md-8 col-xs-12">
                              <!-- Blog Content -->
                             <div class="blog-content">
-                                <a href="#" class="post-tag">The Best</a>
+                                <a href="#" class="post-tag">Blog</a>
                                 <a href="{{ route("post.show") }}" class="post-title">Friend eggs with ham</a>
                                 <div class="post-meta">
                                     <a href="#" class="post-date">July 11, 2018</a>
@@ -52,7 +52,7 @@
                         <div class="col-lg-7 col-md-8 col-xs-12">
                             <!-- Blog Content -->
                             <div class="blog-content">
-                                <a href="#" class="post-tag">The Best</a>
+                                <a href="#" class="post-tag">receite</a>
                                 <a href="{{ route("receipe.show") }}" class="post-title">Mushrooms with pork chop</a>
                                 <div class="post-meta">
                                     <a href="#" class="post-date">July 11, 2018</a>

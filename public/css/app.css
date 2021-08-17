@@ -25573,13 +25573,9 @@ body .ui-tooltip {
   position: relative;
   width: 100%;
 }
-.page-content .inner .form-row .receipe {
-  display: flex;
-  justify-content: space-between;
+.page-content .inner .form-row .recette .receipe {
+  padding: 0.5px;
   width: 100%;
-}
-.page-content .inner .form-row .receipe div {
-  margin: 10px;
 }
 .page-content .inner .form-row .form-holder.form-holder-2 {
   width: 100%;
@@ -26093,7 +26089,6 @@ img {
   padding-bottom: 70px;
 }
 
-/* :: 3.4.0 Preloader */
 /* :: 3.5.0 Miscellaneous */
 .tooltip-inner {
   background-color: #b0c364;

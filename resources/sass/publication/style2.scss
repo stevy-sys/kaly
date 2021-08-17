@@ -193,14 +193,12 @@
         position: relative;
         width: 100%;
     }
-    .inner .form-row .receipe {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        div{
-            margin: 10px;
-        }
-    }
+    .inner .form-row .recette {
+        .receipe {
+            padding: 0.5px;
+            width: 100%;
+        }   
+    } 
     .inner .form-row .form-holder.form-holder-2 {
         width: 100%;
         position: relative;
