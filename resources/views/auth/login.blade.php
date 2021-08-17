@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-md-4 register-left">
                 <img src="/img/image.jpg" alt="" />
-                <h3>Welcome</h3>
-                <p>You are 30 seconds away from earning your own money!</p>
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, repudiandae! Commodi, laboriosam!</p>
                 <a class="btn btn-danger" href="{{ route('accueil') }}">Retour accueil</a>
             </div>
             <div class="mt-3 col-md-8 register-right">

@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-xl-4 px-0 d-none d-lg-block"
-                                        style="background: center center url(https://images.unsplash.com/photo-1533637267520-4dfd6aa7ee93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)no-repeat; background-size: cover;">
+                                        style="background: center center url(/img/image.jpg)no-repeat; background-size: cover;">
                                     </div>
                                 </div>
                             </div>
