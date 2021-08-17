@@ -23,33 +23,68 @@
                             <a href="#" class="post-date">July 11, 2018</a>
                             <a href="#" class="post-author">By Julia Stiles</a>
                         </div>
-                        <h5 class="mb-30">Step 1</h5>
-                        <p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique justo
-                            id elit bibendum pharetra non vitae lectus. Mauris libero felis, dapibus a ultrices sed,
-                            commodo vitae odio. Sed auctor tellus quis arcu tempus. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Etiam ac tincidunt nunc. Cras sed mollis erat. Quisque risus
-                            lorem, mattis nec nisl a, efficitur faucibus ligula. Nulla facilisi. Integer sodales, metus
-                            nec finibus lobortis, ex justo pharetra quam, vel vehicula urna turpis ut risus. Sed
-                            dignissim erat sapien, non malesuada justo cursus nec. Nunc porta pulvinar varius.</p>
 
-                        <h5 class="mb-30">Step 2</h5>
-                        <p class="mb-30">Suspendisse nisl leo, gravida quis tortor at, ornare commodo neque. Donec
-                            tortor turpis, pharetra et pulvinar vitae, ullamcorper et mi. Sed eu magna aliquam, suscipit
-                            massa sit amet, mattis augue. Nam ut tortor ut ligula molestie feugiat vitae et nulla. Sed
-                            porta erat vitae leo pellentesque malesuada. In sollicitudin, massa euismod aliquet
-                            volutpat, enim metus varius dui, vestibulum efficitur ante velit non nisi. Cras varius
-                            bibendum sapien, id tincidunt velit placerat id. Nunc vitae facilisis nunc. Suspendisse ut
-                            felis sagittis mauris faucibus tincidunt vitae id tortor. Nullam tincidunt finibus turpis, a
-                            accumsan mauris laoreet cursus. Phasellus pharetra odio sapien, id suscipit nisi lobortis
-                            ut.</p>
+                        <div id="accordion">
+                            <div class="card text-center mb-3">
+                              <div class="card-header" id="headingOne">
+                                  <h5 class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-hand-o-right" aria-hidden="true"></i> Step 1
+                                  </h5>
+                              </div>
+                          
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                              </div>
+                            </div>
 
-                        <h5 class="mb-30">Step 3</h5>
-                        <p class="mb-30">Duis posuere odio vitae neque egestas luctus. Class aptent taciti sociosqu ad
-                            litora torquent per conubia nostra, per inceptos himenaeos. Integer risus neque,
-                            sollicitudin pharetra pulvinar a, imperdiet porttitor nunc. Aenean pretium, libero eu
-                            pulvinar commodo, lorem enim bibendum est, vel suscipit est mi non tortor. Vestibulum sit
-                            amet pretium tortor. Donec posuere, dui quis dictum hendrerit, odio mauris aliquam lacus, eu
-                            egestas libero risus vel nisi. Proin condimentum varius lectus sed dapibus.</p>
+
+                            <div class="card text-center mb-3">
+                              <div class="card-header" id="headingTwo">
+                                  <h5 class="btn" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-hand-o-right" aria-hidden="true"></i> Step 2
+                                  </h5>
+                              </div>
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique justo
+                                        id elit bibendum pharetra non vitae lectus. Mauris libero felis, dapibus a ultrices sed,
+                                        commodo vitae odio. Sed auctor tellus quis arcu tempus. Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Etiam ac tincidunt nunc. Cras sed mollis erat. Quisque risus
+                                        lorem, mattis nec nisl a, efficitur faucibus ligula. Nulla facilisi. Integer sodales, metus
+                                        nec finibus lobortis, ex justo pharetra quam, vel vehicula urna turpis ut risus. Sed
+                                        dignissim erat sapien, non malesuada justo cursus nec. Nunc porta pulvinar varius.
+                                   
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="card text-center mb-3">
+                              <div class="card-header" id="headingThree">
+                                
+                                  <h5 class="btn" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa fa-hand-o-right" aria-hidden="true"></i> Step 3
+                                  </h5>
+                               
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                   
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique justo
+                                        id elit bibendum pharetra non vitae lectus. Mauris libero felis, dapibus a ultrices sed,
+                                        commodo vitae odio. Sed auctor tellus quis arcu tempus. Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Etiam ac tincidunt nunc. Cras sed mollis erat. Quisque risus
+                                        lorem, mattis nec nisl a, efficitur faucibus ligula. Nulla facilisi. Integer sodales, metus
+                                        nec finibus lobortis, ex justo pharetra quam, vel vehicula urna turpis ut risus. Sed
+                                        dignissim erat sapien, non malesuada justo cursus nec. Nunc porta pulvinar varius.
+                                   
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -145,10 +180,10 @@
                         </div>
                     </div>
 
-                    <!-- Single Widget Area -->
+                    {{-- <!-- Single Widget Area -->
                     <div class="single-widget-area add-widget mb-30">
                         <img src="img/bg-img/add.png" alt="">
-                    </div>
+                    </div> --}}
 
                     <!-- Single Widget Area -->
                     <div class="single-widget-area post-widget mb-30">
