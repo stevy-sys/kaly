@@ -14,7 +14,7 @@
                     <div class="profile-img">
                         <img src="/img/image.jpg" alt="photo de profil" />
                         <div class="file btn btn-lg btn-primary">
-                            Change Photo
+                            <i class="fa fa-camera" aria-hidden="true"></i>
                             <input type="file" name="file" />
                         </div>
                     </div>
@@ -39,8 +39,8 @@
                         <h6>Web Developer and Designer</h6>
                         <p class="profile-rating">Nombre abonnees : <b>233</b></p>
                         <p>
-                            <button class="btn btn-primary"> <a href="">Abonnee</a></button>
-                            <button class="btn btn-success"><a href="">Editer</a></button>
+                            <button class="btn btn-primary"> <a href=""><i class="fa fa-user-plus" aria-hidden="true"></i> Abonnee</a></button>
+                            <button class="btn btn-success"><a href=""><i class="fa fa-pencil" aria-hidden="true"></i> Editer</a></button>
                         </p>
                     </div>
                 </div>
@@ -50,15 +50,15 @@
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-post" data-toggle="tab" href="#post" role="tab"
-                                    aria-controls="post" aria-selected="false">Publication</a>
+                                    aria-controls="post" aria-selected="false"><i class="fa fa-comment" aria-hidden="true"></i> Publication</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">About</a>
+                                    aria-controls="home" aria-selected="true"> <i class="fa fa-user" aria-hidden="true"></i> A propos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                    aria-controls="profile" aria-selected="false">Timeline</a>
+                                    aria-controls="profile" aria-selected="false"><i class="fa fa-bar-chart" aria-hidden="true"></i> Statistique</a>
                             </li>
                         </ul>
                     </div>
