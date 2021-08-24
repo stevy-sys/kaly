@@ -11,6 +11,10 @@
 		<div class="wizard-v6-content">
 			<div class="wizard-form">
 		        <form class="form-register" id="form-register" action="#" method="post">
+					<div class="mt-5 mb-5">
+						<button class="text-center btn btn-success mr-3">Publiez</button>
+						<button class="text-center btn btn-danger ml-3">Visualiser</button>
+					</div>
 					<div id=" form-total">
 						<div class=" container row">
 							<div class="col-lg-4 col-md-6 col-xs-12">

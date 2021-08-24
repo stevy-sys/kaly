@@ -103,11 +103,11 @@
                             </li>
                         @endif
     
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
                     @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -119,7 +119,7 @@
                             <a class="dropdown-item" href="{{ route('profil') }}">
                                 <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ route('message.index') }}">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Message
                             </a>
                             <a class="dropdown-item" href="#">

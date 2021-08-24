@@ -4,10 +4,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ReceipeController;
 use App\Http\Controllers\CategorieController;
-use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,4 @@ Route::get('/post/create/blog', [PostController::class, 'createBlog'])->name('po
 Route::get('/post/create/receipe', [PostController::class, 'createReceipe'])->name('post.create-receipe');
 Route::get('/receipe', [PostController::class, 'showReceipe'])->name('receipe.show');
 Route::get('/categorie', [CategorieController::class, 'index'])->name('categorie.index');
+Route::get('/message', [MessageController::class, 'index'])->name('message.index');

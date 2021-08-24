@@ -39,7 +39,7 @@
                             <a class="dropdown-item" href="{{ route('profil') }}">
                                 <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ route('message.index') }}">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Message
                             </a>
                             <a class="dropdown-item" href="#">

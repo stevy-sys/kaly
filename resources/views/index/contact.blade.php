@@ -107,10 +107,10 @@
                             </div>
                         </div>
 
-                        <!-- Single Widget Area -->
+                        {{-- <!-- Single Widget Area -->
                         <div class="single-widget-area add-widget mb-30">
                             <img src="img/bg-img/add.png" alt="">
-                        </div>
+                        </div> --}}
 
                         <!-- Single Widget Area -->
                         <div class="single-widget-area newsletter-widget mb-30">
