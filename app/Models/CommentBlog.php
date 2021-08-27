@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Blog extends Model
+class CommentBlog extends Model
 {
     use HasFactory;
 
@@ -15,8 +16,8 @@ class Blog extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comments()
+    public function blog()
     {
-        return $this->hasMany(CommentBlog::class);
+        return $this->belongsTo(Blog::class);
     }
 }

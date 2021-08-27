@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -11,9 +12,9 @@ class PostController extends Controller
      *
      * @return void
      */
-    public function showBlog()
+    public function showBlog(Blog $blog)
     {
-        return view("post.show-post-blog");
+        return view("post.show-post-blog",compact('blog'));
     }
 
     /**

@@ -67,88 +67,68 @@
                 <div class="col-12 col-lg-8 col-xl-9">
                     <div class="post-details-content mb-100">
                         <div class="blog-thumbnail mb-50">
-                            <img src="img/bg-img/24.jpg" alt="">
+                            <img src="{{$blog->image}}" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#" class="post-tag">Healthy Food</a>
-                            <h4 class="post-title">Friend eggs with ham</h4>
+                            <h4 class="post-title">{{$blog->title}}</h4>
                             <div class="post-meta mb-50">
-                                <a href="#" class="post-date">July 11, 2018</a>
-                                <a href="#" class="post-author">By Julia Stiles</a>
+                                <a href="#" class="post-date">{{$blog->created_at->diffForHumans()}}</a>
+                                <a href="#" class="post-author">{{$blog->user->name}}</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique justo id elit bibendum pharetra non vitae lectus. Mauris libero felis, dapibus a ultrices sed, commodo vitae odio. Sed auctor tellus quis arcu tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac tincidunt nunc. Cras sed mollis erat. Quisque risus lorem, mattis nec nisl a, efficitur faucibus ligula. Nulla facilisi. Integer sodales, metus nec finibus lobortis, ex justo pharetra quam, vel vehicula urna turpis ut risus. Sed dignissim erat sapien, non malesuada justo cursus nec. Nunc porta pulvinar varius.</p>
-
-                            <p>Suspendisse nisl leo, gravida quis tortor at, ornare commodo neque. Donec tortor turpis, pharetra et pulvinar vitae, ullamcorper et mi. Sed eu magna aliquam, suscipit massa sit amet, mattis augue. Nam ut tortor ut ligula molestie feugiat vitae et nulla. Sed porta erat vitae leo pellentesque malesuada. In sollicitudin, massa euismod aliquet volutpat, enim metus varius dui, vestibulum efficitur ante velit non nisi. Cras varius bibendum sapien, id tincidunt velit placerat id. Nunc vitae facilisis nunc. Suspendisse ut felis sagittis mauris faucibus tincidunt vitae id tortor. Nullam tincidunt finibus turpis, a accumsan mauris laoreet cursus. Phasellus pharetra odio sapien, id suscipit nisi lobortis ut.</p>
-
-                            <p>Duis posuere odio vitae neque egestas luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer risus neque, sollicitudin pharetra pulvinar a, imperdiet porttitor nunc. Aenean pretium, libero eu pulvinar commodo, lorem enim bibendum est, vel suscipit est mi non tortor. Vestibulum sit amet pretium tortor. Donec posuere, dui quis dictum hendrerit, odio mauris aliquam lacus, eu egestas libero risus vel nisi. Proin condimentum varius lectus sed dapibus. Etiam nec iaculis est.</p>
+                            <p>{{$blog->description}}</p>
                         </div>
                     </div>
 
                     <!-- Comment Area Start -->
                     <div class="comment_area clearfix mb-100">
-                        <h4 class="mb-50">Comments</h4>
+                        <h4 class="mb-50">{{ count($blog->comments) }} Commentaire</h4>
 
                         <ol>
                             <!-- Single Comment Area -->
-                            <li class="single_comment_area">
-                                <!-- Comment Content -->
-                                <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
-                                    <div class="comment-author">
-                                        <img src="img/bg-img/32.jpg" alt="author">
-                                    </div>
-                                    <!-- Comment Meta -->
-                                    <div class="comment-meta">
-                                        <div class="d-flex">
-                                            <a href="#" class="post-author">Jane Smith</a>
-                                            <a href="#" class="post-date">July 11, 2018</a>
-                                            <a href="#" class="reply">Reply</a>
+                            @foreach ($blog->comments as $comment)
+                                <li class="single_comment_area">
+                                    <!-- Comment Content -->
+                                    <div class="comment-content d-flex">
+                                        <!-- Comment Author -->
+                                        <div class="comment-author">
+                                            <img src="/img/bg-img/32.jpg" alt="author">
                                         </div>
-                                        <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tinci dunt mi. Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce sagittis sus cipit sem a consequat.</p>
-                                    </div>
-                                </div>
-
-                                <ol class="children">
-                                    <li class="single_comment_area">
-                                        <!-- Comment Content -->
-                                        <div class="comment-content d-flex">
-                                            <!-- Comment Author -->
-                                            <div class="comment-author">
-                                                <img src="img/bg-img/33.jpg" alt="author">
+                                        <!-- Comment Meta -->
+                                        <div class="comment-meta">
+                                            <div class="d-flex">
+                                                <a href="#" class="post-author">{{$comment->user->name}}</a>
+                                                <a href="#" class="post-date">{{$comment->created_at->diffForHumans()}}</a>
+                                                <a href="#" class="reply">Reply</a>
                                             </div>
-                                            <!-- Comment Meta -->
-                                            <div class="comment-meta">
-                                                <div class="d-flex">
-                                                    <a href="#" class="post-author">Christian Williams</a>
-                                                    <a href="#" class="post-date">April 15, 2018</a>
-                                                    <a href="#" class="reply">Reply</a>
+                                            <p>{{$comment->content}}</p>
+                                        </div>
+                                    </div>
+
+                                    
+                                    {{-- reponse au commentaire --}}
+                                    {{-- <ol class="children">
+                                        <li class="single_comment_area">
+                                            <!-- Comment Content -->
+                                            <div class="comment-content d-flex">
+                                                <!-- Comment Author -->
+                                                <div class="comment-author">
+                                                    <img src="img/bg-img/33.jpg" alt="author">
                                                 </div>
-                                                <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, Nullam vel orci dui. Su spendisse sit amet laoreet neque.</p>
+                                                <!-- Comment Meta -->
+                                                <div class="comment-meta">
+                                                    <div class="d-flex">
+                                                        <a href="#" class="post-author">Christian Williams</a>
+                                                        <a href="#" class="post-date">April 15, 2018</a>
+                                                        <a href="#" class="reply">Reply</a>
+                                                    </div>
+                                                    <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, Nullam vel orci dui. Su spendisse sit amet laoreet neque.</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </li>
-
-                            <!-- Single Comment Area -->
-                            <li class="single_comment_area">
-                                <!-- Comment Content -->
-                                <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
-                                    <div class="comment-author">
-                                        <img src="img/bg-img/32.jpg" alt="author">
-                                    </div>
-                                    <!-- Comment Meta -->
-                                    <div class="comment-meta">
-                                        <div class="d-flex">
-                                            <a href="#" class="post-author">Cris Williams</a>
-                                            <a href="#" class="post-date">July 11, 2018</a>
-                                            <a href="#" class="reply">Reply</a>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce sagittis suscipit.</p>
-                                    </div>
-                                </div>
-                            </li>
+                                        </li>
+                                    </ol> --}}
+                                </li>
+                            @endforeach
                         </ol>
                     </div>
 
@@ -188,7 +168,7 @@
                         <div class="single-widget-area author-widget mb-30">
                             <div class="background-pattern bg-img" style="background-image: url(img/core-img/pattern2.png);">
                                 <div class="author-thumbnail">
-                                    <img src="img/bg-img/23.jpg" alt="">
+                                    <img src="/img/bg-img/23.jpg" alt="">
                                 </div>
                                 <p>My name is <span>Jessica Smith</span>, I’m a passionate cook with a love for vegan food.</p>
                             </div>
@@ -210,7 +190,7 @@
                             <div class="single-post-area d-flex">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail">
-                                    <img src="img/bg-img/12.jpg" alt="">
+                                    <img src="/img/bg-img/12.jpg" alt="">
                                 </div>
                                 <!-- Blog Content -->
                                 <div class="blog-content">
@@ -226,7 +206,7 @@
                             <div class="single-post-area d-flex">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail">
-                                    <img src="img/bg-img/13.jpg" alt="">
+                                    <img src="/img/bg-img/13.jpg" alt="">
                                 </div>
                                 <!-- Blog Content -->
                                 <div class="blog-content">
@@ -242,7 +222,7 @@
                             <div class="single-post-area d-flex">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail">
-                                    <img src="img/bg-img/14.jpg" alt="">
+                                    <img src="/img/bg-img/14.jpg" alt="">
                                 </div>
                                 <!-- Blog Content -->
                                 <div class="blog-content">
@@ -258,7 +238,7 @@
                             <div class="single-post-area d-flex">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail">
-                                    <img src="img/bg-img/15.jpg" alt="">
+                                    <img src="/img/bg-img/15.jpg" alt="">
                                 </div>
                                 <!-- Blog Content -->
                                 <div class="blog-content">
@@ -274,7 +254,7 @@
                             <div class="single-post-area d-flex">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail">
-                                    <img src="img/bg-img/16.jpg" alt="">
+                                    <img src="/img/bg-img/16.jpg" alt="">
                                 </div>
                                 <!-- Blog Content -->
                                 <div class="blog-content">

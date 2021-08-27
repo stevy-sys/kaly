@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Blog;
+use App\Models\CommentBlog;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -46,4 +47,9 @@ class User extends Authenticatable
     // {
     //     return $this->hasMany(Blog::class);
     // }
+    
+    public function comments()
+    {
+        return $this->hasMany(CommentBlog::class);
+    }
 }
