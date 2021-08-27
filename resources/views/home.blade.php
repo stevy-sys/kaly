@@ -30,8 +30,8 @@
                                     <a href="#" class="post-tag">Blog</a>
                                     <a href="{{ route("post.show") }}" class="post-title">{{$blog->title}}</a>
                                     <div class="post-meta">
-                                        <a href="#" class="post-date">July 11, 2018</a>
-                                        <a href="#" class="post-author">By Julia Stiles / </a>
+                                        <a href="#" class="post-date">{{$blog->created_at->diffForHumans()}}</a>
+                                        <a href="#" class="post-author">{{$blog->user->name}} / </a>
                                         <a href="#" class="post-author ml-1  "> 2 <i class="fa fa-comment-o mr-1" aria-hidden="true"></i></a>
                                     </div>
                                     <p>{{$blog->description}}</p>
