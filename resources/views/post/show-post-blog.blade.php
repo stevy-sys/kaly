@@ -133,21 +133,12 @@
                     </div>
 
                     <div class="post-a-comment-area mb-30 clearfix">
-                        <h4 class="mb-50">Leave a reply</h4>
+                        <h4 class="mb-50">Commentez </h4>
 
                         <!-- Reply Form -->
                         <div class="contact-form-area">
                             <form action="#" method="post">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" id="name" placeholder="Name*">
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="email" class="form-control" id="email" placeholder="Email*">
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" id="subject" placeholder="Website">
-                                    </div>
                                     <div class="col-12">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                                     </div>
