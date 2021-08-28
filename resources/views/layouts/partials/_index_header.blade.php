@@ -11,11 +11,11 @@
             </button>
             <div id="navbarContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav">
-                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "/" ? "active" : "" }}"><a href="{{ url('/') }}">Accueil</a></li>
-                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "apropos" ? "active" : "" }}"><a href="#">Apropos de nous</a></li>
-                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "blog" ? "active" : "" }}"><a href="#">Blog et mis a jour du site</a></li>
-                    <li class=" nav-link col-lg-3 col-md-12 col-xs-12 {{ request()->path() === "contact" ? "active" : "" }}"><a href="{{route("contact")}}">Contactez-nous</a></li>
-                    
+                    <li class=" nav-link mr-1 {{ request()->path() === "/" ? "active" : "" }}"><a href="{{ url('/') }}">Accueil</a></li>
+                    <li class=" nav-link mr-1 {{ request()->path() === "apropos" ? "active" : "" }}"><a href="#">Apropos de nous</a></li>
+                    <li class=" nav-link mr-1 {{ request()->path() === "blog" ? "active" : "" }}"><a href="#">Blog et mis a jour du site</a></li>
+                    <li class=" nav-link pr-5  {{ request()->path() === "contact" ? "active" : "" }}"><a href="{{route("contact")}}">Contactez-nous</a></li>
+                
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item text-center">
@@ -36,7 +36,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
                             <a href="{{ url('/home') }}" class="dropdown-item"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                            <a class="dropdown-item" href="{{ route('profil') }}">
+                            <a class="dropdown-item" href="{{ route('profil',['user'=> auth()->user()->id]) }}">
                                 <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
                             <a class="dropdown-item" href="{{ route('message.index') }}">

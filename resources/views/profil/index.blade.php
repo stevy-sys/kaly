@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('layouts/partials/_header')
+@include('layouts/partials/_header')
  
 
 <div id="profil">
@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="profile-img">
-                        <img src="/img/image.jpg" alt="photo de profil" />
+                        <img src="{{$user->profil->pdp}}" alt="photo de profil" />
                         <div class="file btn btn-lg btn-primary">
                             <i class="fa fa-camera" aria-hidden="true"></i>
                             <input type="file" name="file" />
@@ -35,8 +35,8 @@
 
                 <div class="col-md-3">
                     <div class="profile-head">
-                        <h5>Kshiti Ghelani</h5>
-                        <h6>Web Developer and Designer</h6>
+                        <h5>{{$user->name}}</h5>
+                        <h6>{{$user->profil->profession}}</h6>
                         <p class="profile-rating">Nombre abonnees : <b>233</b></p>
                         <p>
                             <button class="btn btn-primary"> <a href=""><i class="fa fa-user-plus" aria-hidden="true"></i> Abonnee</a></button>
@@ -67,10 +67,10 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row">
                                 <div class="col-md-6 col-xs-6">
-                                    <label>User Id</label>
+                                    <label>username</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>Kshiti123</p>
+                                    <p>{{$user->profil->username}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -78,7 +78,7 @@
                                     <label>Name</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>Kshiti Ghelani</p>
+                                    <p>{{$user->name}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -86,7 +86,7 @@
                                     <label>Email</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>kshitighelani@gmail.com</p>
+                                    <p>{{$user->email}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +94,7 @@
                                     <label>Phone</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>123 456 7890</p>
+                                    <p>{{$user->profil->phone}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -102,7 +102,7 @@
                                     <label>Profession</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>Web Developer and Designer</p>
+                                    <p>{{$user->profil->profession}}</p>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                     <label>Experience</label>
                                 </div>
                                 <div class="col-md-6 col-xs-5">
-                                    <p>Expert</p>
+                                    <p>{{$user->profil->experience}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -134,24 +134,24 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-xs-6">
-                                    <label>English Level</label>
+                                    <label>Natinnalite</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>Expert</p>
+                                    <p>{{$user->profil->nationnalie}}</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-6 col-xs-6">
                                     <label>Availability</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
                                     <p>6 months</p>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 <div class="col-md-12 col-xs-6">
                                     <label>Your Bio</label><br />
-                                    <p>Your detail description</p>
+                                    <p>{{$user->profil->biographie}}</p>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,6 @@
                             post
                         </div>
                     </div>
-
                 </div>
             </div>
         </form>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfilController extends Controller
@@ -11,8 +12,8 @@ class ProfilController extends Controller
      *
      * @return void
      */
-   public function index()
+   public function index(User $user)
    {
-      return view("profil.index");
+      return view("profil.index",compact('user'));
    }
 }

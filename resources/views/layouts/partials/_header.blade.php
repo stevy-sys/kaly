@@ -116,7 +116,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a href="{{ url('/home') }}" class="dropdown-item"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                            <a class="dropdown-item" href="{{ route('profil') }}">
+                            <a class="dropdown-item" href="{{ route('profil',['user'=> auth()->user()->id]) }}">
                                 <i class="fa fa-user" aria-hidden="true"></i> Profil
                             </a>
                             <a class="dropdown-item" href="{{ route('message.index') }}">

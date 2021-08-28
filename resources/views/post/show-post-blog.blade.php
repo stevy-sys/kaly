@@ -159,9 +159,9 @@
                         <div class="single-widget-area author-widget mb-30">
                             <div class="background-pattern bg-img" style="background-image: url(img/core-img/pattern2.png);">
                                 <div class="author-thumbnail">
-                                    <img src="/img/bg-img/23.jpg" alt="">
+                                    <img src="{{ $blog->user->profil->pdp }}" alt="">
                                 </div>
-                                <p>My name is <span>Jessica Smith</span>, I’m a passionate cook with a love for vegan food.</p>
+                                <p>{{ $blog->user->profil->biographie }}</p>
                             </div>
                             <div class="social-info">
                                 <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
