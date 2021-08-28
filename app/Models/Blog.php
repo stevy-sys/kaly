@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\User;
+
+use App\Models\CategorieBlog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -18,5 +20,10 @@ class Blog extends Model
     public function comments()
     {
         return $this->hasMany(CommentBlog::class);
+    }
+
+    public function categorieBlog()
+    {
+        return $this->belongsTo(CategorieBlog::class);
     }
 }

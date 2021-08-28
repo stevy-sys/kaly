@@ -27,7 +27,7 @@
                             <div class="col-lg-7 col-md-8 col-xs-12">
                                 <!-- Blog Content -->
                                 <div class="blog-content">
-                                    <a href="#" class="post-tag">Blog</a>
+                                    <a href="#" class="post-tag">Blog / categorie de {{ $blog->categorieBlog->name }}</a>
                                     <a href="{{ route("post.show",['blog'=> $blog->id]) }}" class="post-title">{{$blog->title}}</a>
                                     <div class="post-meta">
                                         <a href="#" class="post-date">{{$blog->created_at->diffForHumans()}}</a>
