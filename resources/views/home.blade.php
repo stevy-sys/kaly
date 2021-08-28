@@ -31,7 +31,7 @@
                                     <a href="{{ route("post.show",['blog'=> $blog->id]) }}" class="post-title">{{$blog->title}}</a>
                                     <div class="post-meta">
                                         <a href="#" class="post-date">{{$blog->created_at->diffForHumans()}}</a>
-                                        <a href="#" class="post-author">{{$blog->user->name}} / </a>
+                                        <a href="{{ route('profil',['user' => $blog->user->id]) }}" class="post-author">{{$blog->user->name}} / </a>
                                         <a href="#" class="post-author ml-1  "> {{count($blog->comments)}} <i class="fa fa-comment-o mr-1" aria-hidden="true"></i></a>
                                     </div>
                                     <p>{{$blog->description}}</p>

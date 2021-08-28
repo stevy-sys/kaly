@@ -3,9 +3,10 @@
 namespace App\Models;
 
 // use App\Models\Blog;
+use App\Models\Blog;
 use App\Models\Profil;
-use App\Models\CommentBlog;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\CommentBlog;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,10 +45,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // public function blogs()
-    // {
-    //     return $this->hasMany(Blog::class);
-    // }
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+
     
     public function comments()
     {

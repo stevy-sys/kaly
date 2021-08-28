@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use Illuminate\Http\Request;
+use App\Models\CategorieBlog;
+use Symfony\Component\HttpFoundation\Request;
 
 class PostController extends Controller
 {
@@ -34,7 +35,28 @@ class PostController extends Controller
      */
     public function createBlog()
     {
-        return view("post.create-blog");
+        $categories = CategorieBlog::all();
+        return view("post.create-blog",compact('categories'));
+    }
+
+    /**
+     * Save blog user
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function storeBlog(Request $request)
+    {
+        // $id = $request->request;
+        // dd($id);
+        $data = request()->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'categorie_blog_id' => 'required',
+        ]);
+        auth()->user()->blogs()->create($data);
+        // Blog::create(auth()->user());
+        return redirect('/home');
     }
 
 
