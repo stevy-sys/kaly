@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Profil;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\CommentBlog;
+use App\Models\ReceitteCaracteristique;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -59,5 +60,10 @@ class User extends Authenticatable
     public function profil()
     {
         return $this->hasOne(Profil::class);
+    }
+
+    public function receittes()
+    {
+        return $this->hasMany(ReceitteCaracteristique::class);
     }
 }

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\CategorieBlog;
+use App\Models\ReceitteCategorie;
+use App\Models\ReceitteIngredient;
+use App\Models\ReceittePreparation;
 use Symfony\Component\HttpFoundation\Request;
 
 class PostController extends Controller
@@ -70,13 +73,17 @@ class PostController extends Controller
         return view("post.show-post-receipe");
     }
 
-
+    /**
+     * enregister une receitte
+     *
+     * @param Request $request
+     * @return void
+     */
     public function storeReceipe(Request $request)
     {
-        // $ingr = array();
         foreach ($request->request as $key => $value) {
-            if(preg_match("/ingredient/",$key) || preg_match("/quantite/",$key) || preg_match("/unite/",$key)){
-                if(preg_match("/ingredient/",$key)){
+            if(preg_match("/name/",$key) || preg_match("/quantite/",$key) || preg_match("/unite/",$key)){
+                if(preg_match("/name/",$key)){
                     $dataIngredient[$key] = request()->validate([
                         $key => 'required'
                     ])[$key];
@@ -99,17 +106,36 @@ class PostController extends Controller
             }
             else{ 
                 $dataCaracteristique = request()->validate([
-                    'name' => 'required',
-                    'categorie_recette_id' => 'required',
+                    'menu' => 'required',
                     'duree' => 'required|Integer',
                     'difficulte' => 'required',
                     'depense' => 'required|Integer',
-                    'Personne' => 'required|Integer'
+                    'personne' => 'required|Integer'
                 ]);
+                $dataCaracteristique['user_id'] = auth()->user()->id;
             }
         }
-        dump($dataCaracteristique);
-        dump($dataPreparation);
-        dump($dataIngredient);
+
+        $data1 = ReceitteCategorie::find(1)->receittes()->create($dataCaracteristique);
+        $dataIngredient = array_chunk($dataIngredient,3);
+        $dataPreparation = array_chunk($dataPreparation,1);
+
+        foreach ($dataIngredient as $key => $value) {
+            $ing = new ReceitteIngredient();
+            $ing->name =  $value[0];
+            $ing->quantite = $value[1];
+            $ing->unite = $value[2];
+            $ing->receitte_caracteristique_id = $data1->id;
+            $ing->save();
+        }
+
+        foreach ($dataPreparation as $key => $value) {
+            $step = new ReceittePreparation();
+            $step->step = $value[0];
+            $step->receitte_caracteristique_id = $data1->id;
+            $step->save();
+        }
+
+        return redirect('/home');
     }
 }

@@ -14,7 +14,7 @@
           <label for="name" class="special-label-1 form-row-inner"
             >Ingredient {{ i }}</label
           >
-          <input :name="'ingredient' + i " type="text" class="form-control" id="name" placeholder="" />
+          <input :name="'name' + i " type="text" class="form-control" id="name" placeholder="" />
         </div>
       </div>
       <div class="receipe col-lg-3 col-md-3 col-xs-12">

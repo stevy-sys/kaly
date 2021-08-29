@@ -29,14 +29,14 @@
 										<div class="form-row">
 											<div class="form-holder">
 												<div>
-													<label for="name" class="special-label-1 form-row-inner">Nom du recette</label>
+													<label for="menu" class="special-label-1 form-row-inner">Nom du recette</label>
 													<div class="form-group">
-														<input name="name" type="text" class="form-control" id="name" placeholder="">
+														<input name="menu" type="text" class="form-control" id="menu" placeholder="">
 													</div>
 												
 													<label for="categorie" class="special-label-1 form-row-inner ">Categorie</label>
 													<select name="categorie_recette_id" id="categorie" class="form-control">
-														<option value="categorie 1">categorie 1</option>
+														<option value="1">categorie 1</option>
 														<option value="categorie 2">categorie 2</option>
 														<option value="categorie 3">categorie 3</option>
 														<option value="categorie 4">categorie 4</option>
@@ -77,8 +77,8 @@
 														<span class="input-group-text" id="basic-addon2">euro</span>
 													</div>
 												
-													<label for="Personne" class="special-label-1 form-row-inner ">Personne(s)</label>
-													<select name="Personne" id="Personne" class="form-control">
+													<label for="personne" class="special-label-1 form-row-inner ">Personne(s)</label>
+													<select name="personne" id="personne" class="form-control">
 														<option value="1">1</option>
 														<option value="2">2</option>
 														<option value="3">3</option>

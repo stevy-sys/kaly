@@ -47098,7 +47098,7 @@ var render = function() {
               _c("input", {
                 staticClass: "form-control",
                 attrs: {
-                  name: "ingredient" + i,
+                  name: "name" + i,
                   type: "text",
                   id: "name",
                   placeholder: ""
