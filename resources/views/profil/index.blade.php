@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="profile-img">
-                        <img src="{{$user->profil->pdp}}" alt="photo de profil" />
+                        <img src="{{isset($user->profil->pdp) ? $user->profil->pdp : '/storage/image/pdp_default.jpg' }}" alt="photo de profil" />
                         <div class="file btn btn-lg btn-primary">
                             <i class="fa fa-camera" aria-hidden="true"></i>
                             <input type="file" name="file" />
@@ -36,7 +36,7 @@
                 <div class="col-md-3">
                     <div class="profile-head">
                         <h5>{{$user->name}}</h5>
-                        <h6>{{$user->profil->profession}}</h6>
+                        <h6>{{isset($user->profil->profession) ? $user->profil->profession : 'profession non definie' }}</h6>
                         <p class="profile-rating">Nombre abonnees : <b>233</b></p>
                         <p>
                             <button class="btn btn-primary"> <a href=""><i class="fa fa-user-plus" aria-hidden="true"></i> Abonnee</a></button>
@@ -70,7 +70,7 @@
                                     <label>username</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>{{$user->profil->username}}</p>
+                                    <p>{{isset($user->profil->username) ? $user->profil->username : $user->id}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +94,7 @@
                                     <label>Phone</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>{{$user->profil->phone}}</p>
+                                    <p>{{isset($user->profil->phone) ?? $user->profil->phone }}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -102,7 +102,7 @@
                                     <label>Profession</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>{{$user->profil->profession}}</p>
+                                    <p>{{isset($user->profil->profession) ?? $user->profil->profession }}</p>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                     <label>Experience</label>
                                 </div>
                                 <div class="col-md-6 col-xs-5">
-                                    <p>{{$user->profil->experience}}</p>
+                                    <p>{{isset($user->profil->experience) ?? $user->profil->experience}}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -137,7 +137,7 @@
                                     <label>Natinnalite</label>
                                 </div>
                                 <div class="col-md-6 col-xs-6">
-                                    <p>{{$user->profil->nationnalie}}</p>
+                                    <p>{{isset($user->profil->nationnalie) ?? $user->profil->nationnalie }}</p>
                                 </div>
                             </div>
                             {{-- <div class="row">
@@ -151,7 +151,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-xs-6">
                                     <label>Your Bio</label><br />
-                                    <p>{{$user->profil->biographie}}</p>
+                                    <p>{{isset($user->profil->biographie) ?? $user->profil->biographie }}</p>
                                 </div>
                             </div>
                         </div>
