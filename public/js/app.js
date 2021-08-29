@@ -47097,7 +47097,12 @@ var render = function() {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { type: "text", id: "name", placeholder: "" }
+                attrs: {
+                  name: "ingredient" + i,
+                  type: "text",
+                  id: "name",
+                  placeholder: ""
+                }
               })
             ])
           ]),
@@ -47115,56 +47120,54 @@ var render = function() {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { type: "text", id: "name", placeholder: "" }
+                attrs: {
+                  name: "quantite" + i,
+                  type: "text",
+                  id: "name",
+                  placeholder: ""
+                }
               })
             ])
           ]),
           _vm._v(" "),
-          _vm._m(0, true)
+          _c("div", { staticClass: "receipe col-lg-4 col-md-4 col-xs-12" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "special-label-1 form-row-inner",
+                  attrs: { for: "'unite'" }
+                },
+                [_vm._v("unite " + _vm._s(i))]
+              ),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control",
+                  attrs: { name: "unite" + i, id: "unite" }
+                },
+                [
+                  _c("option", { attrs: { value: "litre" } }, [
+                    _vm._v("litre")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "gramme" } }, [
+                    _vm._v("gramme")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "piece" } }, [_vm._v("piece")])
+                ]
+              )
+            ])
+          ])
         ])
       })
     ],
     2
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "receipe col-lg-4 col-md-4 col-xs-12" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c(
-          "label",
-          {
-            staticClass: "special-label-1 form-row-inner",
-            attrs: { for: "categorie" }
-          },
-          [_vm._v("unite")]
-        ),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control",
-            attrs: { name: "categorie", id: "categorie" }
-          },
-          [
-            _c("option", { attrs: { value: "categorie 1" } }, [
-              _vm._v("litre")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "categorie 2" } }, [
-              _vm._v("gramme")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "categorie 3" } }, [_vm._v("piece")])
-          ]
-        )
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -47234,7 +47237,7 @@ var render = function() {
               _c("textarea", {
                 staticClass: "form-control",
                 attrs: {
-                  name: "step",
+                  name: "step" + j,
                   id: "message",
                   cols: "30",
                   rows: "5",

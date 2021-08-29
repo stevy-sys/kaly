@@ -10,9 +10,10 @@
 		<div class="wizard-heading">Creer une recette</div>
 		<div class="wizard-v6-content">
 			<div class="wizard-form">
-		        <form class="form-register" id="form-register" action="#" method="post">
+		        <form class="form-register" id="form-register" action="{{ route('post.store-receipe') }}" method="post">
+					@csrf
 					<div class="mt-5 mb-5">
-						<button class="text-center btn btn-success mr-3">Publiez</button>
+						<button type="submit" class="text-center btn btn-success mr-3">Publiez</button>
 						<button class="text-center btn btn-danger ml-3">Visualiser</button>
 					</div>
 					<div id=" form-total">
@@ -30,11 +31,11 @@
 												<div>
 													<label for="name" class="special-label-1 form-row-inner">Nom du recette</label>
 													<div class="form-group">
-														<input type="text" class="form-control" id="name" placeholder="">
+														<input name="name" type="text" class="form-control" id="name" placeholder="">
 													</div>
 												
 													<label for="categorie" class="special-label-1 form-row-inner ">Categorie</label>
-													<select name="categorie" id="categorie" class="form-control">
+													<select name="categorie_recette_id" id="categorie" class="form-control">
 														<option value="categorie 1">categorie 1</option>
 														<option value="categorie 2">categorie 2</option>
 														<option value="categorie 3">categorie 3</option>
@@ -55,7 +56,7 @@
 
 													<label for="Duree" class="special-label-1 form-row-inner">Duree du preparation</label>
 													<div class="input-group">
-														<input type="text" class="form-control" placeholder="45" aria-label="45" aria-describedby="basic-addon2">
+														<input name="duree" type="text" class="form-control" placeholder="45" aria-label="45" aria-describedby="basic-addon2">
 														<span class="input-group-text" id="basic-addon2">minute</span>
 													</div>
 												
@@ -72,7 +73,7 @@
 												<div>
 													<label for="Depense" class="special-label-1 form-row-inner">Depense total</label>
 													<div class="input-group">
-														<input type="text" class="form-control" placeholder="5000" aria-label="5000" aria-describedby="basic-addon2">
+														<input name="depense" type="text" class="form-control" placeholder="5000" aria-label="5000" aria-describedby="basic-addon2">
 														<span class="input-group-text" id="basic-addon2">euro</span>
 													</div>
 												

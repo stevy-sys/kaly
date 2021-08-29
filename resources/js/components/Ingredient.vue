@@ -14,7 +14,7 @@
           <label for="name" class="special-label-1 form-row-inner"
             >Ingredient {{ i }}</label
           >
-          <input type="text" class="form-control" id="name" placeholder="" />
+          <input :name="'ingredient' + i " type="text" class="form-control" id="name" placeholder="" />
         </div>
       </div>
       <div class="receipe col-lg-3 col-md-3 col-xs-12">
@@ -22,18 +22,18 @@
           <label for="name" class="special-label-1 form-row-inner"
             >quantite {{ i }}</label
           >
-          <input type="text" class="form-control" id="name" placeholder="" />
+          <input :name="'quantite' + i " type="text" class="form-control" id="name" placeholder="" />
         </div>
       </div>
       <div class="receipe col-lg-4 col-md-4 col-xs-12">
         <div class="form-group">
-          <label for="categorie" class="special-label-1 form-row-inner"
-            >unite</label
+          <label for="'unite'" class="special-label-1 form-row-inner"
+            >unite {{ i }}</label
           >
-          <select name="categorie" id="categorie" class="form-control">
-            <option value="categorie 1">litre</option>
-            <option value="categorie 2">gramme</option>
-            <option value="categorie 3">piece</option>
+          <select :name="'unite' + i" id="unite" class="form-control">
+            <option value="litre">litre</option>
+            <option value="gramme">gramme</option>
+            <option value="piece">piece</option>
           </select>
         </div>
       </div>

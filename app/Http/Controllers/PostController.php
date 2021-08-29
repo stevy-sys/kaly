@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function showBlog(Blog $blog)
     {
-        return view("post.show-post-blog",compact('blog'));
+        return view("post.show-post-blog", compact('blog'));
     }
 
     /**
@@ -36,7 +36,7 @@ class PostController extends Controller
     public function createBlog()
     {
         $categories = CategorieBlog::all();
-        return view("post.create-blog",compact('categories'));
+        return view("post.create-blog", compact('categories'));
     }
 
     /**
@@ -68,5 +68,48 @@ class PostController extends Controller
     public function showReceipe()
     {
         return view("post.show-post-receipe");
+    }
+
+
+    public function storeReceipe(Request $request)
+    {
+        // $ingr = array();
+        foreach ($request->request as $key => $value) {
+            if(preg_match("/ingredient/",$key) || preg_match("/quantite/",$key) || preg_match("/unite/",$key)){
+                if(preg_match("/ingredient/",$key)){
+                    $dataIngredient[$key] = request()->validate([
+                        $key => 'required'
+                    ])[$key];
+                }
+                if(preg_match("/quantite/",$key)){
+                    $dataIngredient[$key] = request()->validate([
+                        $key => 'required|Integer'
+                    ])[$key];
+                }
+                if(preg_match("/unite/",$key)){
+                    $dataIngredient[$key] = request()->validate([
+                        $key => 'required'
+                    ])[$key];
+                }
+            }
+            elseif (preg_match("/step/",$key) ){
+                $dataPreparation[$key] = request()->validate([
+                    $key => 'required'
+                ])[$key];
+            }
+            else{ 
+                $dataCaracteristique = request()->validate([
+                    'name' => 'required',
+                    'categorie_recette_id' => 'required',
+                    'duree' => 'required|Integer',
+                    'difficulte' => 'required',
+                    'depense' => 'required|Integer',
+                    'Personne' => 'required|Integer'
+                ]);
+            }
+        }
+        dump($dataCaracteristique);
+        dump($dataPreparation);
+        dump($dataIngredient);
     }
 }

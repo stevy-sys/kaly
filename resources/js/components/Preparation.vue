@@ -13,7 +13,7 @@
         <div class="form-group">
           <label for="name" class="special-label-1">Step-{{ j }}</label>
           <textarea
-            name="step"
+            :name="'step'+j"
             class="form-control"
             id="message"
             cols="30"

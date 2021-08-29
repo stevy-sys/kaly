@@ -27,12 +27,14 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profil/{user}', [ProfilController::class, 'index'])->name('profil');
-Route::get('/post/{blog}', [PostController::class, 'showBlog'])->name('post.show');
 
-Route::get('/post/create/blog', [PostController::class, 'createBlog'])->name('post.create-blog');
-Route::post('/post/create/blog', [PostController::class, 'storeBlog'])->name('post.store-blog');
+Route::get('/blog/create', [PostController::class, 'createBlog'])->name('post.create-blog');
+Route::post('/blog/create', [PostController::class, 'storeBlog'])->name('post.store-blog');
+Route::get('/blog/{blog}', [PostController::class, 'showBlog'])->name('post.show');
 
-Route::get('/post/create/receipe', [PostController::class, 'createReceipe'])->name('post.create-receipe');
+Route::get('/receipe/create', [PostController::class, 'createReceipe'])->name('post.create-receipe');
+Route::post('/receipe/create', [PostController::class, 'storeReceipe'])->name('post.store-receipe');
 Route::get('/receipe', [PostController::class, 'showReceipe'])->name('receipe.show');
+
 Route::get('/categorie', [CategorieController::class, 'index'])->name('categorie.index');
 Route::get('/message', [MessageController::class, 'index'])->name('message.index');
